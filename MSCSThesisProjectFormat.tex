@@ -41,6 +41,7 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{float}
 
 \usepackage[subfigure, titles]{tocloft}
 \usepackage{acronym}
@@ -134,10 +135,10 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 % These 3 sections are optional 
 \singlespacing  
 %\doublespacing % Single or Double spacing for these sections?
-\input{Sections/Copyright}
-\input{Sections/Dedication}
-\input{Sections/Acknowledgments}
-\input{Sections/Abstract}
+%\input{Sections/Copyright}
+%\input{Sections/Dedication}
+%\input{Sections/Acknowledgments}
+%\input{Sections/Abstract}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -161,13 +162,18 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-\input{Sections/Chapter1}
-\input{Sections/Chapter2}
-\input{Sections/Chapter3}
+%Sections
+\input{Sections/Chapter1_Atmo_Overview}
+\input{Sections/Chapter2_MSCS_Project_Proposal}
+\input{Sections/Chapter3_Desktop_App_Differences}
+\input{Sections/Chapter4_User_Manual}
+%\input{Sections/Chapter1}
+%\input{Sections/Chapter2}
+%\input{Sections/Chapter3}
 
 
 \singlespacing
 %\bibliographystyle{apalike}
-\bibliographystyle{IEEEtran}
-\bibliography{MyLibrary}
+%\bibliographystyle{IEEEtran}
+%\bibliography{MyLibrary}
 \end{document}

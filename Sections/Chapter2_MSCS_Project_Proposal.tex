@@ -1,0 +1,58 @@
+\chapter{MSCS Project Proposal} %\label{Atmosniffer Overview}
+%\vspace{-7mm}
+%\bigskip
+This chapter provides the purpose, approach, research, and criteria on the approved project proposal.
+\section{Purpose}
+The main purpose of this application was to make a more user friendly AtmoSniffer Device Interface that could be easily accessed by both, developers and users.
+Moreover, the main audience for the application is the research team at WSU. For them to be able to visualize data sent by a device, in a graph format, and to communicate and control the device for calibration purposes.
+
+Other than building an application that people can easily use, I wanted to learn python, a new framework, such as qt, and how to professionally document a project.
+
+\section{Approach}
+To develop the application, I went through each step of the Software Development Life Cycle. With the help and permission of Dr. Valle, I created a GitHub repository to hold a copy of the old desktop application and start building from there. At first, I tried continuing and building up from the old desktop application, but I rather quickly found out that the old project lacked proper documentation and it was a much better idea to start from scratch rather than spend a whole month trying to decyphering it. I still kept the old project there under a legacy folder as a reference.
+
+I was able to create a GUI and test it only with the help of python libraries. I met with users throughout and scheduled sprints to develop features.
+\section{Research}
+Research was focused on learning a QT, a new framework, and pythong. I used pyqt5 library which is the binding between qt and python.
+
+The application needed to be able to handle a lot of data quickly. Python came with a big number of libraries used for data visualization, analysis, and parsing. This is the reason we chose it, but also because I have always wanted to learn it.
+
+One more reason I found to do this project was for me to learn and experience a professional approach to software development. Including clean code, documentation, life cycle, testing, and a lot of messing up and debugging. 
+
+The optimal goal of this project is to visualize a large amount of data.
+
+\section{Criteria}
+Application goals and milestones
+\begin{itemize}
+	\item Read data from SD card
+	\item Visualize data from SD files
+	\item Suppport bluetooth and radio connectivity.
+		\begin{itemize}
+		\item Connec to device
+		\item Receive data from a device through bluetooth and/or radio signals
+		\end{itemize}
+	\item Visualize data from broadcast records.
+		\begin{itemize}
+		\item Create and close graphs
+		\item Give the user the option to choose which type of graph they would like to see.
+		\end{itemize}	
+	\item Send commands to the connected device through bluetooth and/or radio signals
+		\begin{itemize}
+		\item Turn ON/OFF device components
+		\item Enable extra debugging
+		\item Reset sensors
+		\end{itemize}
+	\item Documentation
+		\begin{itemize}
+		\item Full documentation of code, following best standards.
+		\item Documentation on how to use the application
+		\end{itemize}
+	\item Unit Testing
+		\begin{itemize}
+		\item This includes code and gui components of the application
+		\end{itemize}
+	\item Support Multiple OS
+		\begin{itemize}
+		\item Create executables/installers for various OS
+		\end{itemize}
+\end{itemize}

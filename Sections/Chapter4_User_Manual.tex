@@ -1,0 +1,409 @@
+\chapter{AtmoSniffer User Manual} %\label{Atmosniffer Overview}
+%\vspace{-7mm}
+%\bigskip
+	Hello and welcome to the Desktop application for the AtmoSniffer!
+	Here you will find all you need to know to install, run, and even develop the application.
+
+	With this application you are able to coonnect to an atmosniffer device, open static report files, and compare data with the help of graphs. You are also able to communicate with the connected devices through commands. This is a python project, so please familiarize yourself with python first.
+\section{Users}
+Let's first start with a quick guide for every day users!
+\subsection{Installation}
+	For the every day user we have a very simple and easy to use installer, here is the link [], download and follow all instructions inside.
+\subsection{Opening a file}
+	So you want to look at old data and compare it with other device's or even the same device's data? Well you can do it by first making sure you have the desktop application running.
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/main_window.png}
+ \caption{Main desktop window}
+ \label{fig:main window}
+\end{figure}
+\newpage
+
+	Use the menu item File on the left-top corner of the screen and then click Open. This should bring up a dialog for you to find whichever data file you would like to look at.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/open_file_dialog.png}
+ \caption{Open file dialog}
+ \label{fig:open file dialog}
+\end{figure}
+
+	!You can also use the shortcut CTRL+O!
+
+	After the dialog has popped up, navigate into the DATA folder and select your desired file, click okay and you should hopefully have a new device added into the application for analysis.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/open_file_dialog_data_selection.png}
+ \caption{Choosing ATM02.CSV from open file dialog}
+ \label{fig:open file dialog data selection}
+\end{figure}
+
+	In this case we are using the ATM02.CSV file.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/opened_device.png}
+ \caption{ATM02.CSV file opened}
+ \label{fig:opened atm02 csv file}
+\end{figure}
+
+\subsection{Adding a graph to an open file}
+	Now that you have succesfully opened a device, lets try to add a graph to the main window and start analysing. First you will need to click the Add Graph button on the right side of the device and this next dialong should pop up.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/graph_dialog.png}
+ \caption{Graph Dialog}
+ \label{fig:graph dialog}
+\end{figure}
+
+	From here, go ahead and select wich type of graph you would like to see and then continue to select which x-axis/y-axis data item would you like to see. Please keep in mind that line graph and bar graph only need the x - axis item, but the scatter plot needs both. Once you have selected your desired graph type and items go ahead and click 'Ok'
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/graph_dialog_select.png}
+ \caption{Graph Dialog Selections}
+ \label{fig:graph dialog selections}
+\end{figure}
+
+	This should add a new graph tab to our device window.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/opened_graph_static_device.png}
+ \caption{Opened graph on a static device, csv file}
+ \label{fig:opened graph on static device}
+\end{figure}
+
+\subsection{Closing graphs}
+	If you would like to close an opened graph, you just need to click on the small 'x' by the selected graph's tab.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/close_graph_icon.png}
+ \caption{Close a graph}
+ \label{fig:close a graph}
+\end{figure}
+
+\subsection{Connecting to an AtmoSniffer Device}
+	If you would like to watch the data being transmitted from an AtmoSniffer device then all you have to do is go to the main window, go to the top left menu 'File', and then click Connect Device. This should bring up a little dialog window asking you to choose from the currently connected devices in your computer. This can be done through bluetooth or radio for now.
+You can also use the shortcut CTRL+O!
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/com_ports_dialog.png}
+ \caption{Communication Ports Dialog}
+ \label{fig:com ports dialog}
+\end{figure}
+
+	The image above shows the current connected devices on my computer, by going into the communication ports settings on my computer I know that I should be connecting to COM6 since that's what corresponds to the actual AtmoSniffer Device. I'll choose it from the dropdown menu and then proceed to click Select. If everything goes right we should get an additional outline added to our main window with the name of its corresponding communication port.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/com_device_opened.png}
+ \caption{Communication port device opened}
+ \label{fig:com device opened}
+\end{figure}
+
+	Caution! Might sometimes not work as expected because of signals being sent through the 'air'
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/error_com_dialog.png}
+ \caption{Error dialog for communication port}
+ \label{fig:com port error}
+\end{figure}
+
+	If this happens, it can mean one of two things. It could be that you are trying to connect to a communication port that does not correspond to an AtmoSniffer Device or it just had a small hiccup and you should just try again.
+
+\subsection{Sending commands to connected device}
+
+	Before you are able to send any commands, please make sure you have succesfully connected to a device first and then follow either one of the next list items.
+	By clicking on 'View' -> 'Terminal' a terminal window will be added to the bottom of the screen and you will be able to see the commands being sent to the connected device.
+
+	\begin{itemize}
+	\item Manual:
+	\newline To be able to send a command manually, click on the device's 'Manual Command' button, this should pop up a window.
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/manual_command_dialog.png}
+	 \caption{Manual command dialog}
+	 \label{fig:manual command dialog}
+	\end{figure}
+
+	Now go ahead and type in your command and then proceed to press 'Send Command', in this case I will be sending 'ac 0', which should turn it off.
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/command_dialog_ac.png}
+	 \caption{Turning off the ac module through a manual command}
+	 \label{fig:manual command ac}
+	\end{figure}
+
+	\item Dropdown Menu:
+	\newline Using the dropdown menu can sometimes speed things up since you won't be needing to type anything down.
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/dropdown_menu_dynamic_device.png}
+	 \caption{Dynamic device, dropdown menu}
+	 \label{fig:dropdown menu dynamic device}
+	\end{figure}
+
+	Just click on the name of the module you would like to interact with and click on one of it's pre configured options.
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/dropdown_menu_command_options.png}
+	 \caption{Dropdown menu command options}
+	 \label{fig:dropdown menu command options}
+	\end{figure}
+	\end{itemize}
+
+	\subsection{Closing a connected device}
+	Now you are all set up and are able to enjoy the application! To close a device, just click on the 'Close Device' button and you are set!
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/dy_close_device_button.png}
+	 \caption{Close dynamic device}
+	 \label{fig:close dynamic device}
+	\end{figure}
+	
+
+\newpage
+\section{Developers}
+\subsection{Installation}
+\begin{itemize}
+\item Installer
+\newline As a developer I think the Installer is not your best option, but why not, right? Just follow the installer instructions as you download it here link...
+\item Required libraries
+\newline First, you will need to clone this repository into your local branches. Then, inside the Docs folder there is a file with the name 'requirements.txt' this file contains the name of all libraries used in this application. This is very useful because we can use the command 'pip install -r requirements'.txt to download and install them all.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/pip_install_requirements.png}
+ \caption{Installing requirements with pip}
+ \label{fig:pip install requirements}
+\end{figure}
+
+In my case, I have all those libraries installed already so I get a bunch of 'Requirement already satisfied' messages.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{project_images/requirements_satisfied.png}
+ \caption{Requirements satisfied}
+ \label{fig:requirements satisfied}
+\end{figure}
+
+If you have added a new library into the application, use the command 'pip freeze > ./Docs/requirements.txt' in the main folder and it should create a new 'requirements.txt' file that can be later used to install all required libraries.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/pip_freeze.png}
+ \caption{Pip freeze}
+ \label{fig:pip freeze}
+\end{figure}	
+\end{itemize}
+
+\subsection{Creating the installer}
+	For this project, I use cx$\_$Freeze and InnoSetup to make an executable and the installer, it is fairly easy to make. I have already made a python file called setup.py which can be called with the command 'py setup.py build', this will run it and create an executable inside the folder build.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=4cm]{project_images/setup_build.png}
+ \caption{Setup command}
+ \label{fig:setup command}
+\end{figure}	
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/build_folder.png}
+ \caption{Build folder}
+ \label{fig:build folder}
+\end{figure}	
+	
+	Once the executable has been created you will notice that it won't really work, this is because once the executable is created it does not move all required files into the build folder. Here is where we come in, we have to move in all dependencies into the build folder. All folders and files such as; receiver, ui, images, graphs, dialogs, DATA, com$\_$popup.py, Device.py, etc. Once this is done, try running the executable, if it works then we can move on to making the installer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/required_files.png}
+ \caption{Required files for executable to work}
+ \label{fig:required files}
+\end{figure}	
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/build_folder_required.png}
+ \caption{Inside build folder with required files}
+ \label{fig:required files in build folder}
+\end{figure}	
+
+	So I like I had said before, I use InnoSetup, it is fairly easy to use. I'm currently using their 6.2.0 version. You can download it from THIS LINK (https://jrsoftware.org/isdl.php).
+	After running InnoSetup, you will get this Welcome dialog. Choose "Create a new script file using the Script Wizard" and click "Ok".
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/inno_setup_welcome.png}
+ \caption{Using Inno Setup to make an installer}
+ \label{fig:inno setup welcome}
+\end{figure}
+
+	Click "Next" on the next popup window, until you get to this window where we need to fill in our application information.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/inno_atmo_info.png}
+ \caption{Information concerning our application}
+ \label{fig:inno atmo info}
+\end{figure}
+
+	Next we will continue to press "Next" until we find ourselves in the Application Files Window, where we need to add all of the files in our "build" folder by clicking "Add File(s)" and/or "Add Folder"
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/inno_added_files.png}
+ \caption{Adding files to the installer}
+ \label{fig:inno added files}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/inno_selected_files.png}
+ \caption{Selected files in Inno Setup}
+ \label{fig:inno selected files}
+\end{figure}
+	
+	It is a little different for adding folders, first we choose which folder we would like to add and then we select it and click on the "Edit" button to make sure our folder contents are added to the right folder inside our application's installation folder
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/inno_adding_folder.png}
+ \caption{Adding folders to inno setup}
+ \label{fig:inno adding folder}
+\end{figure}
+
+	In the image above, you can see that for the folder dialogs, you need to click on it, edit it and add the string "dialogs" under "Destination subfolder", and then click "Ok". Do this for all folders inside the build folder.
+
+	Do not include the .exe under "Other application files"
+
+	At last, we should select our executable file with the "Browse" button in the "Application Files" window.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/inno_added_exe.png}
+ \caption{Selecting the exe file}
+ \label{fig:inno added exe}
+\end{figure}
+
+	Next, we continue clicking "Next" until we get to the "Compiler Settings" window where we are going to set our output file name, and choose the icon file from the build/images/ folder called logo$\_$icon.ico as the application's icon image.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/inno_compiler_window.png}
+ \caption{Choosing compiler inno setup}
+ \label{fig:inno compiler window}
+\end{figure}
+
+	After you have something like the image above, click next until you see the finish button and click on it. Next up you will be asked if you want to run the script. Click on "No".
+	You will see something like this:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/inno_atmo_script.png}
+ \caption{Inno Setup Script Example}
+ \label{fig:inno atmo script}
+\end{figure}
+
+	From here, there are two things we need to ensure we do. First, we need to give our users persmission to modify the DATA folder since our computer software will not allow us to modify anything inside the "Program Files" folder without permissions. For this we need to look for our "DATA" folder source and add "; Permissions: users-modify"
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/inno_users_modify.png}
+ \caption{Giving users the required permissions to modify files in system folders}
+ \label{fig:inno users modify}
+\end{figure}
+
+	Now that we have that solved, we need to make sure the icon will show correctly for the setup/installer and the executable. Lets move down the script until we see the "[Icons]" Group, here we will copy both items and paste them right under the other two.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/inno_icons_copy.png}
+ \caption{Setting up placeholders for icons.}
+ \label{fig:inno icons copy}
+\end{figure}
+
+	And we edit both copies with IconFilename:" \textbraceleft app\textbraceright 	\textbackslash images\textbackslash logo\_icon.ico" 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/inno_icons_iconfilename.png}
+ \caption{Editing script line to correctly use icons.}
+ \label{fig:inno icons iconfilename}
+\end{figure}
+
+	Next, we save the script and run it. Once the script is done running you need to go to the folder where you saved your script at and look for the "Output" folder. It will contain our installation executable, which can then be used to install the AtmoSniffer Desktop application.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/atmo_setup_installer.png}
+ \caption{Atmosniffer setup installer.}
+ \label{fig:atmo setup installer}
+\end{figure}
+
+\subsection{Adding more commands to device command dropdown}
+	We can use the AtmoSniffer Desktop application to communicate to connected "devices" this can be done by either, manually typing the command in a text box or by using a the custom dropdown embedded into a device widget. With the addition of new AtmoSniffer versions we could be getting new useful commands that would be much easier to use through the dropdown menu, rather than manually typing it in, but they haven't been added yet.
+
+	If this happens we need to go to the dynamicDevice.py, here is where we can add new commands. At first we need to make a decision, do we want to add a new module to the whole program or do we just need to work on an existing module? If a new module is needed then we need to go to the self.cmd$\_$list.addItems() line and inside the function call we need to add the name of said module. Else, we just leave it how it is.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/submenu_cmd_list.png}
+ \caption{Submenu cmd list.}
+ \label{fig:submenu cmd listr}
+\end{figure}
+
+	Now that that's done we go down to the on\_changed\_cmd\_list function where we will need to keep in mind which commands we will be sending to the selected module.
+
+	Here is where it gets a bit tricky but don't worry I promise is not that hard. We are essentially building up a command inside a stack. The first "if" block checks for wether we have already started building a command or not. If not, then it will first add the module name to the command stack, "self.cmd". and change the dropdown menu with the new options for said module.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=13cm]{project_images/cmd_list_first_if.png}
+ \caption{First if block in the command making process.}
+ \label{fig:cmd list first if}
+\end{figure}
+
+	Next, we know that the option the user clicked on cannot be the first time they clicked so we check which option they clicked on, and depending on the first index of our command stack we change the command dropdown with new options, but not without checking if the first index module is supposed to have these new options first.
+	We always want to append something to our stack even if its meaningless, otherwise the function will not work since it could remove the wrong item once the option \textless back is clicked, for this we add meaningless options surrounded by \textless and\textgreater.
+	Once an end argument is reached, we add the end argument and the item \textless end\textgreater to our command stack
+	For example if the option they clicked on is "Battery Volts" then we first check if the first index of the command stack has the word "mbi", if so we append a "4" and then the \textless end\textgreater tag.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{project_images/battery_volts_example.png}
+ \caption{Battery volts command example.}
+ \label{fig:battery volts example}
+\end{figure}
+	
+	Lastly, we check if the command stack has the \textless end\textgreater tag, if so we build the command by first looking for all those meaningless tags and removing them, and then joining the remaining stack items into a single string and sending it to the device itself with a helper method.
+
+\subsection{Add more headers for upcoming versions}
+
+	At the time this guide is being created, AtmoSniffer has 2 versions; 2.0 and 3.0. The project will continue to grow which means that more versions will be added.
+	For this, we need to make sure we tell the application about the new versions or it will continue to crash. This can be done by going to the file versionParsing.py
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/version_parsing.png}
+ \caption{Version parsing.}
+ \label{fig:version parsing}
+\end{figure}
+
+We just need to add a new elif statement with our new version number with the correct returned header. Keep the version number as a double/float.
+
+
+
+
