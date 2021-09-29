@@ -171,8 +171,54 @@ You can also use the shortcut CTRL+O!
 	 \caption{Close dynamic device}
 	 \label{fig:close dynamic device}
 	\end{figure}
-	
 
+	\subsection{Find communication port}
+	 This guid only works for windows sytems.
+	 For bluetooth connections, we will bring up our bluetooth settings and find the correct one.
+	 At first lets open our notifications in the task bar, right click on bluetooth, and then "go to settings".
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/bt_go_settings.png}
+	 \caption{Bluetooth settings}
+	 \label{fig:bt_settings}
+	\end{figure}	
+
+	Now, after the settings window is up, lets choose More Bluetooth options.
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/more_bt_settings.png}
+	 \caption{More bluetooth settings}
+	 \label{fig:more_bt_settings}
+	\end{figure}
+
+	After we have done this, we should get another little window, where we have the tab "COM ports". If we click there we will see our connected and available bluetooth com ports. For example COM6 and COM8. You need to use the ones with 'RNI-SPP'
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/com_ports_list.png}
+	 \caption{Com ports list}
+	 \label{fig:com_ports_list}
+	\end{figure}
+
+For physically connected devices, its a bit easier. We go to our search menu in Windows and type in "Device Manager", press enter, and wait for the Device Manager window to pop up.
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/dev_manager.png}
+	 \caption{Device Manager}
+	 \label{fig:dev_manager}
+	\end{figure}
+
+We now look for the "Ports (COM $\&$ LPT)" list, click on it, and voila! Here we have a list of all communication ports, the only problem is that it doesnt really tell us the name of each of them. So to be able to find our correct communication port, we will have to connect and disconnect our radio receiver and check which of those communication ports disappears/appears.
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{project_images/dev_manager_ports.png}
+	 \caption{Device Manager Com Ports}
+	 \label{fig:dev_manager_ports}
+	\end{figure}
 \newpage
 \section{Developers}
 \subsection{Installation}
@@ -404,6 +450,25 @@ If you have added a new library into the application, use the command 'pip freez
 
 We just need to add a new elif statement with our new version number with the correct returned header. Keep the version number as a double/float.
 
+\subsection{Run Tests}
+Now you want to run tests, right? Well its very simple. We can either run gui tests or unit tests. At first, lets run gui tests. You will need to have the project open on VSCode, making sure the file "atmoSniffer.py" is visible on the left explorer menu.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/vscode_atmosniffer.png}
+ \caption{vscode Atmosniffer.}
+ \label{fig:vscode_atmo}
+\end{figure}
+
+Now you need to open a command prompt terminal, navigate to the tests/gui directory and run the tests$\_$runner.py file making sure the that vscode is visible.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{project_images/vscode_atmosniffer_run_tests.png}
+ \caption{vscode Atmosniffer run tests.}
+ \label{fig:vscode_atmo_run_tests}
+\end{figure}
+
+Now we just let the tests run and hope to get an OK at the end. For the unit tests, we open the file test$\_$version$\_$parsing.py and click on the run test icon by the test/method name.
 
 
