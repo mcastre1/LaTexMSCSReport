@@ -120,7 +120,7 @@ You can also use the shortcut CTRL+O!
 \subsection{Sending commands to connected device}
 
 	Before you are able to send any commands, please make sure you have succesfully connected to a device first and then follow either one of the next list items.
-	By clicking on 'View' -> 'Terminal' a terminal window will be added to the bottom of the screen and you will be able to see the commands being sent to the connected device.
+	By clicking on 'View' -\textgreater 'Terminal' a terminal window will be added to the bottom of the screen and you will be able to see the commands being sent to the connected device.
 
 	\begin{itemize}
 	\item Manual:
@@ -175,7 +175,7 @@ You can also use the shortcut CTRL+O!
 	\subsection{Find communication port}
 	 This guid only works for windows sytems.
 	 For bluetooth connections, we will bring up our bluetooth settings and find the correct one.
-	 At first lets open our notifications in the task bar, right click on bluetooth, and then "go to settings".
+	 At first lets open our notifications in the task bar, right click on bluetooth, and then ``go to settings".
 
 	\begin{figure}[H]
 	\centering
@@ -193,7 +193,7 @@ You can also use the shortcut CTRL+O!
 	 \label{fig:more_bt_settings}
 	\end{figure}
 
-	After we have done this, we should get another little window, where we have the tab "COM ports". If we click there we will see our connected and available bluetooth com ports. For example COM6 and COM8. You need to use the ones with 'RNI-SPP'
+	After we have done this, we should get another little window, where we have the tab ``COM ports". If we click there we will see our connected and available bluetooth com ports. For example COM6 and COM8. You need to use the ones with 'RNI-SPP'
 
 	\begin{figure}[H]
 	\centering
@@ -202,7 +202,7 @@ You can also use the shortcut CTRL+O!
 	 \label{fig:com_ports_list}
 	\end{figure}
 
-For physically connected devices, its a bit easier. We go to our search menu in Windows and type in "Device Manager", press enter, and wait for the Device Manager window to pop up.
+For physically connected devices, its a bit easier. We go to our search menu in Windows and type in ``Device Manager", press enter, and wait for the Device Manager window to pop up.
 
 	\begin{figure}[H]
 	\centering
@@ -211,7 +211,7 @@ For physically connected devices, its a bit easier. We go to our search menu in 
 	 \label{fig:dev_manager}
 	\end{figure}
 
-We now look for the "Ports (COM $\&$ LPT)" list, click on it, and voila! Here we have a list of all communication ports, the only problem is that it doesnt really tell us the name of each of them. So to be able to find our correct communication port, we will have to connect and disconnect our radio receiver and check which of those communication ports disappears/appears.
+We now look for the ``Ports (COM $\&$ LPT)" list, click on it, and voila! Here we have a list of all communication ports, the only problem is that it doesnt really tell us the name of each of them. So to be able to find our correct communication port, we will have to connect and disconnect our radio receiver and check which of those communication ports disappears/appears.
 
 	\begin{figure}[H]
 	\centering
@@ -244,7 +244,7 @@ In my case, I have all those libraries installed already so I get a bunch of 'Re
  \label{fig:requirements satisfied}
 \end{figure}
 
-If you have added a new library into the application, use the command 'pip freeze > ./Docs/requirements.txt' in the main folder and it should create a new 'requirements.txt' file that can be later used to install all required libraries.
+If you have added a new library into the application, use the command 'pip freeze \textgreater ./Docs/requirements.txt' in the main folder and it should create a new 'requirements.txt' file that can be later used to install all required libraries.
 
 \begin{figure}[H]
 \centering
@@ -288,7 +288,7 @@ If you have added a new library into the application, use the command 'pip freez
 \end{figure}	
 
 	So I like I had said before, I use InnoSetup, it is fairly easy to use. I'm currently using their 6.2.0 version. You can download it from THIS LINK (https://jrsoftware.org/isdl.php).
-	After running InnoSetup, you will get this Welcome dialog. Choose "Create a new script file using the Script Wizard" and click "Ok".
+	After running InnoSetup, you will get this Welcome dialog. Choose ``Create a new script file using the Script Wizard" and click ``Ok".
 
 \begin{figure}[H]
 \centering
@@ -297,7 +297,7 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno setup welcome}
 \end{figure}
 
-	Click "Next" on the next popup window, until you get to this window where we need to fill in our application information.
+	Click ``Next" on the next popup window, until you get to this window where we need to fill in our application information.
 
 \begin{figure}[H]
 \centering
@@ -306,7 +306,7 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno atmo info}
 \end{figure}
 
-	Next we will continue to press "Next" until we find ourselves in the Application Files Window, where we need to add all of the files in our "build" folder by clicking "Add File(s)" and/or "Add Folder"
+	Next we will continue to press ``Next" until we find ourselves in the Application Files Window, where we need to add all of the files in our ``build" folder by clicking ``Add File(s)" and/or ``Add Folder"
 
 \begin{figure}[H]
 \centering
@@ -322,7 +322,7 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno selected files}
 \end{figure}
 	
-	It is a little different for adding folders, first we choose which folder we would like to add and then we select it and click on the "Edit" button to make sure our folder contents are added to the right folder inside our application's installation folder
+	It is a little different for adding folders, first we choose which folder we would like to add and then we select it and click on the ``Edit" button to make sure our folder contents are added to the right folder inside our application's installation folder
 
 \begin{figure}[H]
 \centering
@@ -331,11 +331,11 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno adding folder}
 \end{figure}
 
-	In the image above, you can see that for the folder dialogs, you need to click on it, edit it and add the string "dialogs" under "Destination subfolder", and then click "Ok". Do this for all folders inside the build folder.
+	In the image above, you can see that for the folder dialogs, you need to click on it, edit it and add the string ``dialogs" under ``Destination subfolder", and then click ``Ok". Do this for all folders inside the build folder.
 
-	Do not include the .exe under "Other application files"
+	Do not include the .exe under ``Other application files"
 
-	At last, we should select our executable file with the "Browse" button in the "Application Files" window.
+	At last, we should select our executable file with the ``Browse" button in the ``Application Files" window.
 
 \begin{figure}[H]
 \centering
@@ -344,7 +344,7 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno added exe}
 \end{figure}
 
-	Next, we continue clicking "Next" until we get to the "Compiler Settings" window where we are going to set our output file name, and choose the icon file from the build/images/ folder called logo$\_$icon.ico as the application's icon image.
+	Next, we continue clicking ``Next" until we get to the ``Compiler Settings" window where we are going to set our output file name, and choose the icon file from the build/images/ folder called logo$\_$icon.ico as the application's icon image.
 
 \begin{figure}[H]
 \centering
@@ -353,7 +353,7 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno compiler window}
 \end{figure}
 
-	After you have something like the image above, click next until you see the finish button and click on it. Next up you will be asked if you want to run the script. Click on "No".
+	After you have something like the image above, click next until you see the finish button and click on it. Next up you will be asked if you want to run the script. Click on ``No".
 	You will see something like this:
 
 \begin{figure}[H]
@@ -363,7 +363,7 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno atmo script}
 \end{figure}
 
-	From here, there are two things we need to ensure we do. First, we need to give our users persmission to modify the DATA folder since our computer software will not allow us to modify anything inside the "Program Files" folder without permissions. For this we need to look for our "DATA" folder source and add "; Permissions: users-modify"
+	From here, there are two things we need to ensure we do. First, we need to give our users persmission to modify the DATA folder since our computer software will not allow us to modify anything inside the ``Program Files" folder without permissions. For this we need to look for our ``DATA" folder source and add ``; Permissions: users-modify"
 
 \begin{figure}[H]
 \centering
@@ -372,7 +372,7 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno users modify}
 \end{figure}
 
-	Now that we have that solved, we need to make sure the icon will show correctly for the setup/installer and the executable. Lets move down the script until we see the "[Icons]" Group, here we will copy both items and paste them right under the other two.
+	Now that we have that solved, we need to make sure the icon will show correctly for the setup/installer and the executable. Lets move down the script until we see the ``[Icons]" Group, here we will copy both items and paste them right under the other two.
 
 \begin{figure}[H]
 \centering
@@ -381,7 +381,7 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno icons copy}
 \end{figure}
 
-	And we edit both copies with IconFilename:" \textbraceleft app\textbraceright 	\textbackslash images\textbackslash logo\_icon.ico" 
+	And we edit both copies with IconFilename:`` \textbraceleft app\textbraceright 	\textbackslash images\textbackslash logo\_icon.ico" 
 
 \begin{figure}[H]
 \centering
@@ -390,7 +390,7 @@ If you have added a new library into the application, use the command 'pip freez
  \label{fig:inno icons iconfilename}
 \end{figure}
 
-	Next, we save the script and run it. Once the script is done running you need to go to the folder where you saved your script at and look for the "Output" folder. It will contain our installation executable, which can then be used to install the AtmoSniffer Desktop application.
+	Next, we save the script and run it. Once the script is done running you need to go to the folder where you saved your script at and look for the ``Output" folder. It will contain our installation executable, which can then be used to install the AtmoSniffer Desktop application.
 
 \begin{figure}[H]
 \centering
@@ -400,7 +400,7 @@ If you have added a new library into the application, use the command 'pip freez
 \end{figure}
 
 \subsection{Adding more commands to device command dropdown}
-	We can use the AtmoSniffer Desktop application to communicate to connected "devices" this can be done by either, manually typing the command in a text box or by using a the custom dropdown embedded into a device widget. With the addition of new AtmoSniffer versions we could be getting new useful commands that would be much easier to use through the dropdown menu, rather than manually typing it in, but they haven't been added yet.
+	We can use the AtmoSniffer Desktop application to communicate to connected ``devices" this can be done by either, manually typing the command in a text box or by using a the custom dropdown embedded into a device widget. With the addition of new AtmoSniffer versions we could be getting new useful commands that would be much easier to use through the dropdown menu, rather than manually typing it in, but they haven't been added yet.
 
 	If this happens we need to go to the dynamicDevice.py, here is where we can add new commands. At first we need to make a decision, do we want to add a new module to the whole program or do we just need to work on an existing module? If a new module is needed then we need to go to the self.cmd$\_$list.addItems() line and inside the function call we need to add the name of said module. Else, we just leave it how it is.
 
@@ -413,7 +413,7 @@ If you have added a new library into the application, use the command 'pip freez
 
 	Now that that's done we go down to the on\_changed\_cmd\_list function where we will need to keep in mind which commands we will be sending to the selected module.
 
-	Here is where it gets a bit tricky but don't worry I promise is not that hard. We are essentially building up a command inside a stack. The first "if" block checks for wether we have already started building a command or not. If not, then it will first add the module name to the command stack, "self.cmd". and change the dropdown menu with the new options for said module.
+	Here is where it gets a bit tricky but don't worry I promise is not that hard. We are essentially building up a command inside a stack. The first ``if" block checks for wether we have already started building a command or not. If not, then it will first add the module name to the command stack, ``self.cmd". and change the dropdown menu with the new options for said module.
 
 \begin{figure}[H]
 \centering
@@ -425,7 +425,7 @@ If you have added a new library into the application, use the command 'pip freez
 	Next, we know that the option the user clicked on cannot be the first time they clicked so we check which option they clicked on, and depending on the first index of our command stack we change the command dropdown with new options, but not without checking if the first index module is supposed to have these new options first.
 	We always want to append something to our stack even if its meaningless, otherwise the function will not work since it could remove the wrong item once the option \textless back is clicked, for this we add meaningless options surrounded by \textless and\textgreater.
 	Once an end argument is reached, we add the end argument and the item \textless end\textgreater to our command stack
-	For example if the option they clicked on is "Battery Volts" then we first check if the first index of the command stack has the word "mbi", if so we append a "4" and then the \textless end\textgreater tag.
+	For example if the option they clicked on is ``Battery Volts" then we first check if the first index of the command stack has the word ``mbi", if so we append a ``4" and then the \textless end\textgreater tag.
 
 \begin{figure}[H]
 \centering
@@ -451,7 +451,7 @@ If you have added a new library into the application, use the command 'pip freez
 We just need to add a new elif statement with our new version number with the correct returned header. Keep the version number as a double/float.
 
 \subsection{Run Tests}
-Now you want to run tests, right? Well its very simple. We can either run gui tests or unit tests. At first, lets run gui tests. You will need to have the project open on VSCode, making sure the file "atmoSniffer.py" is visible on the left explorer menu.
+Now you want to run tests, right? Well its very simple. We can either run gui tests or unit tests. At first, lets run gui tests. You will need to have the project open on VSCode, making sure the file ``atmoSniffer.py" is visible on the left explorer menu.
 
 \begin{figure}[H]
 \centering
